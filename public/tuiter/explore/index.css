@@ -137,6 +137,10 @@ ul {
     float: left;
 }
 
+.wd-explore-text b{
+    color: black;
+}
+
 .wd-explore-ellipsis {
     float: right;
 }
@@ -146,5 +150,14 @@ ul {
     vertical-align: middle;
 }
 
+.wd-tuit-profile {
+    float: right;
+    height: 6rem;
+    border-radius: 10px;
+}
 
+.wd-user-icon-48 {
+    height: 48px;
+    border-radius: 100px;
+}
 
