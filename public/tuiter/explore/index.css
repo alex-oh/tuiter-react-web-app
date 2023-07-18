@@ -1,0 +1,150 @@
+/* styles for tuiter explore page */
+:root {
+    --grey-text: #64737e;
+    --light-grey: #ecf1f2;
+    --tuiter-blue: #0f8eec;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+.wd-search-section {
+    margin: 1.5rem 1rem;
+    clear: both;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+.wd-search-bar {
+    background-color: var(--light-grey);
+    border-radius: 1.5rem;
+    padding: .5rem;
+    margin-right: 2rem;
+    width: 100%;
+    float: left;
+}
+
+.wd-cog {
+    float: left;
+    width: 10%;
+}
+
+input[type="search"] {
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+}
+
+.fa-search {
+    padding-left: .5rem;
+    margin-right: .8rem;
+    color: var(--grey-text);
+}
+
+.wd-tabs {
+    clear: both;
+    margin: 1.5em 2rem;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-explore-list {
+    clear: both;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    color: var(--grey-text)
+}
+
+.wd-tab {
+    list-style-type: none;
+    border: none;
+    text-align: center;
+    width: 20%;
+    float: left;
+    height: 100%;
+}
+
+.wd-tab-focus {
+    color: black;
+    border-bottom: .3em solid;
+    border-color: var(--tuiter-blue);
+    float: left;
+    height: 100%;
+}
+
+.wd-explore-img {
+    border-top: solid;
+    border-bottom: solid;
+    z-index: 0;
+    margin: auto;
+    border-color: var(--light-grey);
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+.wd-explore-img::before {
+    content: '';
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: linear-gradient(to top, black, transparent);
+}
+
+.wd-explore-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.wd-explore-img h2 {
+    padding: 0px;
+    margin: 0px;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 50;
+}
+
+.wd-explore-tuits {
+    padding: .5rem 1rem;
+}
+
+.wd-explore-topic {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    clear: both;
+    overflow: auto;
+    color: var(--grey-text);
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+.wd-explore-topic b {
+    color: black;
+    font-size: 1rem;
+}
+
+.wd-explore-text {
+    float: left;
+}
+
+.wd-explore-ellipsis {
+    float: right;
+}
+
+.fa-ellipsis-h {
+    float: right;
+    vertical-align: middle;
+}
+
+
+
