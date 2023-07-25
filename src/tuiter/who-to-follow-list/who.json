@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 123,
+        "userName": "queu",
+        "handle": "queueue",
+        "avatarIcon": "/users/user_quagsire.png"
+    },
+    {
+        "_id": 234,
+        "userName": "achu",
+        "handle": "pika",
+        "avatarIcon": "/users/profile.jpg"
+    },
+    {
+        "_id": 345,
+        "userName": "SpaceX",
+        "handle": "SpaceX",
+        "avatarIcon": "/users/user_deoxys.jpg"
+    }
+]
