@@ -38,6 +38,7 @@ const Todos = () => {
                         onChange={todoChangeHandler}
                         value={todo.do}
                         className="form-control w-75"
+                        placeholder="placeholder placeholder placeholder"
                     />
                 </li>
                 {todos.map((todo, index) => (
