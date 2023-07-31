@@ -36,6 +36,7 @@ const TuitItem = ({
                             {tuit.handle} • {tuit.time}
                         </span>
                         <p>{tuit.tuit}</p>
+                        <TuitStats key={tuit._id} tuit={tuit} />
                     </div>
                     <BsXLg className="float-end" 
                     onClick={() => deleteTuitHandler(tuit._id)}/>
@@ -43,7 +44,6 @@ const TuitItem = ({
                         <i class="fa fa-ellipsis-h"></i>
                     </div>
                 </div>
-                <TuitStats key={tuit._id} tuit={tuit} />
             </div>
         </li>
     );

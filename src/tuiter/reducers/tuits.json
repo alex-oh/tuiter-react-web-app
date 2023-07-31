@@ -6,7 +6,7 @@
         "title": "Bulgarian carrots",
         "time": "1h",
         "image": "user2.jpg",
-        "liked": true,
+        "liked": false,
         "replies": "123",
         "retuits": "234",
         "likes": "345",

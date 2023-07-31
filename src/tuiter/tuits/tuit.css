@@ -102,14 +102,14 @@ p {
 
 .wd-tuit-icons {
     margin-top: 1em;
-    padding: 0rem 6%;
+    padding: 0rem;
     clear: both;
     color: var(--grey-text);
     overflow: hidden;
 }
 
 .wd-tuit-icon {
-    width: 8em;
+    width: 25%;
     float: left;
 }
 
