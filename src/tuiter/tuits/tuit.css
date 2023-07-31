@@ -40,10 +40,8 @@ p {
 
 
 .wd-tuit {
-    padding: 1.5rem;
+    padding: .5rem;
     overflow: hidden;
-    border-bottom: solid 1px;
-    border-color: var(--light-grey);
 }
 
 .wd-tuit-top {
@@ -63,8 +61,8 @@ p {
 }
 
 .wd-tuit-contents {
-    width: 75%;
-    margin: 0rem 1rem;
+    width: 100%;
+    margin: 0rem 0rem 0rem 1rem;
     float: left;
 }
 
