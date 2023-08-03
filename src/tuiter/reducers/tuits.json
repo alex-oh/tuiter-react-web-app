@@ -1,0 +1,59 @@
+[
+    {
+        "_id": 123,
+        "topic": "Cooking",
+        "userName": "Billiam",
+        "title": "Bulgarian carrots",
+        "time": "1h",
+        "image": "user2.jpg",
+        "liked": false,
+        "replies": "123",
+        "retuits": "234",
+        "likes": "345",
+        "handle": "@billiam",
+        "tuit": "Bulgarian carrot garlic sriracha noodles Southern Italian muffins chia seeds chickpea crust pizza hot banana bread Italian pepperoncini red grapes summertime cozy cinnamon oatmeal avocado dressing drizzle!!!"
+    },
+    {
+        "_id": 124,
+        "topic": "Cooking",
+        "userName": "Alex",
+        "title": "Instant pot",
+        "time": "2h",
+        "image": "user1.jpg",
+        "liked": true,
+        "replies": "123",
+        "retuits": "234",
+        "likes": "345",
+        "handle": "@alex",
+        "tuit": "Instant pot cauliflower creamy cauliflower alfredo almond milk chai latte bite sized mediterranean strawberries summer shiitake mushrooms sandwiches tofu coconut rice cinnamon Italian linguine puttanesca with pumpkin Mexican fiesta creamiest kung pao pepper soba noodles picnic Thai dragon pepper overflowing berries chili pepper kimchi."
+    },
+    {
+        "_id": 125,
+        "topic": "Local Weather",
+        "userName": "quagmere mortal",
+        "title": "Re: Volcano",
+        "time": "3h",
+        "image": "user_quagsire.png",
+        "liked": false,
+        "replies": "2.3K",
+        "retuits": "20",
+        "likes": "30.3K",
+        "handle": "@quagsirewastaken",
+        "tuit": "Volcano is smoking... hmmm.."
+    },
+
+    {
+        "_id": 126,
+        "topic": "Space",
+        "userName": "SpaceX",
+        "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+        "time": "2h",
+        "image": "spacex.png",
+        "liked": true,
+        "replies": 123,
+        "retuits": 432,
+        "likes": 2345,
+        "handle": "@spacex",
+        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars"
+    }
+]
