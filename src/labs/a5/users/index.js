@@ -1,4 +1,4 @@
-import { getUsers, createUser } from "./service";
+import { getUsers, createUser, removeUser, updateUser } from "./service";
 import { useState, useEffect } from "react";
 
 function Users() {
@@ -32,6 +32,18 @@ function Users() {
         setUsers(users);
     };
 
+    const handleRemove = async (uid) => {
+        const users = await removeUser(uid);
+        setUsers(users);
+    };
+
+    const handleRoleUpdate = async(user, newRole) => {
+        // alert(newRole);
+        const newUser = {...user, role: newRole};
+        const users = await updateUser(newUser);
+        setUsers(users);
+    }
+
     return (
         <div>
             <h3>Users</h3>
@@ -52,7 +64,22 @@ function Users() {
                 </li>
                 {users.map((user) => (
                     <li key={user._id} className="list-group-item">
-                        {user.username}
+                        <button
+                            onClick={() => handleRemove(user._id)}
+                            className="btn btn-danger float-end"
+                        >
+                            Delete
+                        </button>
+                        {user.username}: {user.role}
+                        <select
+                            value={user.role}
+                            className="form-control w-25 float-end"
+                            onChange={(e) => handleRoleUpdate(user, e.target.value)}
+                        >
+                            <option value="admin">Admin</option>
+                            <option value="faculty">Faculty</option>
+                            <option value="student">Student</option>
+                        </select>
                     </li>
                 ))}
             </ul>

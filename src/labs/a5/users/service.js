@@ -12,7 +12,7 @@ const USERS_API = "http://localhost:4000/api/users";
 //     })
 // };
 export const createUser = async (username, user) => {
-    const response = await axios.post(`${USERS_API}/create`, user);
+    const response = await axios.post(`${USERS_API}/2`, user);
     return response.data;
 
 }
@@ -22,3 +22,13 @@ export const getUsers = async () => {
     return response.data;
 };
 export const getUserById = () => {};
+
+export const removeUser = async (uid) => {
+    const response = await axios.delete(`${USERS_API}/2/${uid}`);
+    return response.data;
+}
+
+export const updateUser = async (newUser) => {
+    const response = await axios.put(`${USERS_API}/2/${newUser._id}`, newUser);
+    return response.data;
+}
