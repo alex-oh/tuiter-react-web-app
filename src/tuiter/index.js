@@ -4,7 +4,7 @@ import NavigationSidebar from "./navigation-sidebar";
 import HomeScreen from "./home-screen";
 import ExploreScreen from "./explore-screen";
 import BookmarksScreen from "./bookmarks-screen";
-import ProfileScreen from "./profile-screen";
+import ProfileScreen from "./user/profile-screen";
 import NotificationsScreen from "./notifications-screen";
 import MessagesScreen from "./messages-screen";
 import ListsScreen from "./lists-screen";
@@ -16,7 +16,10 @@ import tuitsReducer from "./reducers/tuits-reducer";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
-const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer}});
+const store = configureStore({
+    reducer: {
+        who: whoReducer, 
+        tuits: tuitsReducer}});
 
 function Tuiter() {
     return (

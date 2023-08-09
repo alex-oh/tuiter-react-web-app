@@ -1,4 +1,5 @@
-import React from "react";
+import { updateTuitThunk } from "../services/tuits-thunks";
+import { useDispatch } from "react-redux";
 
 const TuitStats = ({
     tuit = {
@@ -10,6 +11,8 @@ const TuitStats = ({
         image: "tesla.png",
     },
 }) => {
+    const dispatch = useDispatch();
+
     return (
         <div class="wd-tuit-icons">
             <div class="wd-tuit-icon">
@@ -23,11 +26,28 @@ const TuitStats = ({
                     class={`${
                         tuit.liked ? "wd-liked-tuit fa" : "far"
                     } fa-heart`}
+                    onClick={() =>
+                        dispatch(
+                            updateTuitThunk({ ...tuit, likes: tuit.likes + 1 })
+                        )
+                    }
                 ></i>{" "}
-                {tuit.likes}
+                <span className="ms-2">{tuit.likes}</span>
+            </div>
+            <div class="wd-tuit-icon">
+                <i
+                    class={`${tuit.disliked ? "fas" : "far"} fa-thumbs-down`}
+                    onClick={() =>
+                        dispatch(
+                            updateTuitThunk({ ...tuit, dislikes: tuit.dislikes + 1 })
+                        )
+                    }
+                />
+                <span className="ms-2">{tuit.dislikes}</span>
             </div>
             <div class="wd-tuit-icon">
                 <i class="far fa-share-square"></i>
+                <span className="ms-2">{tuit.retuits}</span>
             </div>
         </div>
     );
