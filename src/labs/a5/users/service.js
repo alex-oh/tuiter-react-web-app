@@ -11,8 +11,8 @@ const USERS_API = "http://localhost:4000/api/users";
 //         return response.data;
 //     })
 // };
-export const createUser = async (username) => {
-    const response = await axios.get(`${USERS_API}/create/${username}`);
+export const createUser = async (username, user) => {
+    const response = await axios.post(`${USERS_API}/create`, user);
     return response.data;
 
 }

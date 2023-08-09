@@ -25,7 +25,10 @@ function Users() {
     const handleAdd = async () => {
         // something should happen after clicking 'add'
         // alert("add " + username);
-        const users = await createUser(username);
+        const users = await createUser(username, {
+            username: username,
+            type: username,
+        });
         setUsers(users);
     };
 
