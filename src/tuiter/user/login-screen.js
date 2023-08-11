@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { loginThunk } from "../services/auth-thunks";
+import { useSelector } from "react-redux";
+
 function LoginScreen() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    let {currentUser} = useSelector((state) => state.user)
     const handleLogin = async () => {
         try {
-            await dispatch(loginThunk({ username, password }));
-            navigate("/profile");
+            currentUser = dispatch(loginThunk({ username, password }));
+            // if dispatch is successful, then navigate to the profile page
+            currentUser && navigate("../profile");
         } catch (e) {
             alert(e);
         }
@@ -18,6 +22,8 @@ function LoginScreen() {
     return (
         <div>
             <h1>Login Screen</h1>
+            currentUser:
+            <pre>{JSON.stringify(currentUser, null, 2)}</pre>
             <div className="mt-2">
                 <label>Username</label>
                 <input

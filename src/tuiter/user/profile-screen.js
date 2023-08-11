@@ -6,29 +6,37 @@ import {
     logoutThunk,
     updateUserThunk,
 } from "../services/auth-thunks";
+
 function ProfileScreen() {
     const { currentUser } = useSelector((state) => state.user);
-    const [profile, setProfile] = useState(currentUser);
+    const [profile, setProfile] = useState([]);
+    console.log(profile);
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const save = async () => {
-        await dispatch(updateUserThunk(profile));
+        dispatch(updateUserThunk(profile));
     };
-    useEffect(async () => {
-        const loadProfile = async () => {
-            const { payload } = await dispatch(profileThunk());
-            setProfile(payload);
-        };
+    const loadProfile = async () => {
+        const { payload } = await dispatch(profileThunk());
+        setProfile(payload);
+    };
+    useEffect(() => {
         loadProfile();
     }, []);
     return (
         <div>
             <h1>Profile Screen</h1>
+            currentUser:
+            <pre>{JSON.stringify(currentUser, null, 2)}</pre>
+            profile:
+            <pre>{JSON.stringify(profile, null, 2)}</pre>
             {profile && (
                 <div>
                     <div>
                         <label>First Name</label>
                         <input
+                            className="form-control"
                             type="text"
                             value={profile.firstName}
                             onChange={(event) => {
@@ -39,10 +47,11 @@ function ProfileScreen() {
                                 setProfile(newProfile);
                             }}
                         />
-                    </div>
+                    </div>{" "}
                     <div>
                         <label>Last Name</label>
                         <input
+                            className="form-control"
                             type="text"
                             value={profile.lastName}
                             onChange={(event) => {
@@ -59,7 +68,8 @@ function ProfileScreen() {
             <button
                 onClick={() => {
                     dispatch(logoutThunk());
-                    navigate("/login");
+                    setProfile();
+                    navigate("../login");
                 }}
             >
                 {" "}
