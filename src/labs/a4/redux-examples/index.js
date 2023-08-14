@@ -5,6 +5,7 @@ import todos from "./reducers/todos-reducer";
 import { configureStore } from "@reduxjs/toolkit";
 import Todos from "./todos-component";
 import { Provider } from "react-redux";
+// the store pulls in all of the data slices from ./reducers
 const store = configureStore({ reducer: { hello, todos } });
 
 const ReduxExamples = () => {
