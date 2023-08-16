@@ -1,13 +1,13 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
+const USERS_API = process.env.REACT_APP_API_BASE.concat("/users");
+
 // create instance of axios that supports cookies
 const api = axios.create({
     withCredentials: true,
-    baseURL: "http://localhost:4000/api/users",
+    baseURL: USERS_API,
 });
-
-const USERS_API = "http://localhost:4000/api/users";
 
 export const registerThunk = createAsyncThunk(
     "user/register",
