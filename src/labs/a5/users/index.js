@@ -8,13 +8,6 @@ function Users() {
         const users = await getUsers();
         setUsers(users);
     };
-    // useEffect(() => {
-    //     const promise = getUsers();
-    //     promise.then((data) => {
-    //         console.log(data);
-    //         setUsers(data);
-    //     });
-    // }, []);
 
     // call the async function loadUsers defined above
     useEffect(() => {
@@ -27,8 +20,10 @@ function Users() {
         // alert("add " + username);
         const users = await createUser(username, {
             username: username,
+            password: "password",
             type: username,
         });
+        console.log(users);
         setUsers(users);
     };
 

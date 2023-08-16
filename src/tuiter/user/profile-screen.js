@@ -10,7 +10,6 @@ import {
 function ProfileScreen() {
     const { currentUser } = useSelector((state) => state.user);
     const [profile, setProfile] = useState([]);
-    console.log(profile);
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -31,7 +30,7 @@ function ProfileScreen() {
             <pre>{JSON.stringify(currentUser, null, 2)}</pre>
             profile:
             <pre>{JSON.stringify(profile, null, 2)}</pre>
-            {profile && (
+            {currentUser && (
                 <div>
                     <div>
                         <label>First Name</label>
